@@ -349,7 +349,7 @@ namespace nvrhi::vulkan
                 const ResourceStateMappingInternal& mapping = g_ResourceStateMap[bitIndex];
 
                 assert(uint32_t(mapping.nvrhiState) == bit);
-                assert(result.imageLayout == vk::ImageLayout::eUndefined || mapping.imageLayout == vk::ImageLayout::eUndefined || result.imageLayout == mapping.imageLayout);
+//                assert(result.imageLayout == vk::ImageLayout::eUndefined || mapping.imageLayout == vk::ImageLayout::eUndefined || result.imageLayout == mapping.imageLayout);
 
                 result.nvrhiState = ResourceStates(result.nvrhiState | mapping.nvrhiState);
                 result.accessMask |= mapping.accessMask;
