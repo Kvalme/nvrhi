@@ -55,7 +55,7 @@ endif()
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 if (NVRHI_WITH_VULKAN)
-    add_subdirectory(thirdparty/Vulkan-Headers)
+#    add_subdirectory(thirdparty/Vulkan-Headers)
 endif()
 
 if (NVRHI_WITH_RTXMU)
@@ -309,7 +309,7 @@ if (NVRHI_WITH_VULKAN)
         target_link_libraries(${nvrhi_vulkan_target} rtxmu)
     endif()
 
-    target_link_libraries(${nvrhi_vulkan_target} Vulkan-Headers)
+#    target_link_libraries(${nvrhi_vulkan_target} Vulkan-Headers)
 
 endif()
 
