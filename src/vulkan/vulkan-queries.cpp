@@ -149,12 +149,12 @@ namespace nvrhi::vulkan
     {
         TimerQuery* query = checked_cast<TimerQuery*>(_query);
 
-        assert(query->started);
-
         if (query->resolved)
         {
             return true;
         }
+
+        assert(query->started);
 
         uint32_t timestamps[2] = { 0, 0 };
 
